@@ -5,15 +5,12 @@ public class Main {
         
         Scanner sc = new Scanner(System.in);
         int n1 = sc.nextInt();
-        int n2 = sc.nextInt();
-        int[] result = new int[3];
+        String n2 = sc.next();
         
-        for (int i = 0; i < 3; i++) {
-            result[i] = n1 * (n2 % 10);
-            System.out.println(n1 * (n2 % 10));
-            n2 /= 10;
-        }
-        System.out.println(result[0] + result[1] * 10 + result[2] * 100);
+        System.out.println(n1 * (n2.charAt(2) - '0'));
+        System.out.println(n1 * (n2.charAt(1) - '0'));
+        System.out.println(n1 * (n2.charAt(0) - '0'));
+        System.out.println(n1 * Integer.parseInt(n2));
         
         sc.close();
         
