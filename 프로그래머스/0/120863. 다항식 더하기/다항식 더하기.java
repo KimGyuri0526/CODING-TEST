@@ -1,9 +1,9 @@
 class Solution {
     public String solution(String polynomial) {
-        // x는 1x로 변경 후, " + "를 기준으로 배열에 담기
+        
         String[] arr = polynomial.replaceAll("\\bx", "1x").split(" \\+ ");
-        int coe = 0;    // 계수
-        int con = 0;    // 상수
+        int coe = 0;    
+        int con = 0;    
         
         for (String s : arr) {
             if (s.contains("x")) {		                            
